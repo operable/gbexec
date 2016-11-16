@@ -16,7 +16,7 @@
 
 ```
 > gbexec --help
-gbexec 0.1.0
+gbexec 1.0.0
 
 gbexec (-s,--slack|-h,--hipchat) <template file> <data file>
 
@@ -26,4 +26,20 @@ gbexec (-s,--slack|-h,--hipchat) <template file> <data file>
 
 <template file>	Path to a Greenbar template
 <data file>	Path to a file containing valid JSON
+```
+
+## Examples
+
+### Render a template for Slack
+
+```
+> bin/gbexec -s hello.greenbar data.json
+*Hello Louise*
+```
+
+### Render a template for HipChat
+
+```
+> bin/gbexec -h hello.greenbar data.json
+<strong>Hello Louise</strong>
 ```

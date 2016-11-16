@@ -10,6 +10,7 @@ defmodule GreenbarExec do
             aliases: [s: :slack, h: :hipchat]]
 
   def main(args) do
+
     {options, args, _} = OptionParser.parse(args, @options)
     if valid_invocation?(options, args) == false do
       display_help

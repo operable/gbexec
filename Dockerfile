@@ -9,4 +9,4 @@ WORKDIR /code
 RUN mix do deps.get, escript.package
 ENV PATH /code/bin:$PATH
 
-CMD /code/bin/gbexec
+ENTRYPOINT ["/code/bin/gbexec"]

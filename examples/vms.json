@@ -1,0 +1,10 @@
+{
+  "vms": [
+    {
+      "name": "machine01"
+    },
+    { 
+      "name": "machine02"
+    }
+  ]
+}

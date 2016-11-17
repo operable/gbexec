@@ -55,3 +55,5 @@ gbexec (-s,--slack|-h,--hipchat) <template file> <data file>
 > bin/gbexec -h hello.greenbar data.json
 <strong>Hello Louise</strong>
 ```
+
+See [examples](examples/README.md) directory for more examples.

@@ -1,5 +1,5 @@
-%{"greenbar": {:git, "https://github.com/operable/greenbar.git", "938cd230fd7eae59a282fd986507a7d64ea529a3", []},
-  "greenbar_markdown": {:git, "https://github.com/operable/greenbar_markdown.git", "8efb355e8c893bb3c27f9de143a268b1282365c5", []},
+%{"greenbar": {:git, "https://github.com/operable/greenbar.git", "a0f2f0540ee9089a1d36061b86efdb4e92b640d1", [branch: "kevsmith/paragraph-children"]},
+  "greenbar_markdown": {:git, "https://github.com/operable/greenbar_markdown.git", "5f13b0a4364ee3282704137a5b96b4ab44c1af8f", [branch: "kevsmith/paragraph-children"]},
   "piper": {:git, "https://github.com/operable/piper.git", "1d52b32f41226398fdb37baca7398bbf0b93c1a3", []},
   "poison": {:hex, :poison, "2.2.0", "4763b69a8a77bd77d26f477d196428b741261a761257ff1cf92753a0d4d24a63", [:mix], []},
   "table_rex": {:hex, :table_rex, "0.8.3", "1c68dfc6886d6f118f5047b0449d6402ae0ac5709064789e578c2f4659f4064b", [:mix], []},

@@ -23,7 +23,7 @@ defmodule GreenbarExec.Mixfile do
   end
 
   defp deps do
-    [{:greenbar, github: "operable/greenbar"},
+    [{:greenbar, github: "operable/greenbar", branch: "kevsmith/paragraph-children"},
      {:template_processors, github: "operable/template_processors"}]
   end
 

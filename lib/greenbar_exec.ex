@@ -68,11 +68,14 @@ defmodule GreenbarExec do
   end
 
   defp display_results(output, attachment) do
-    unless output == nil do
-      IO.puts String.trim_trailing(output)
+    unless output == nil or output == "" do
+      IO.puts "#{String.trim_trailing(output)}"
     end
     unless attachment == nil do
-      IO.puts String.trim_trailing("#{attachment}")
+      if output != nil and output != "" do
+        IO.puts "----------"
+      end
+      IO.puts Poison.encode!(attachment, pretty: true)
     end
   end
 

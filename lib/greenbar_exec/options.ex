@@ -1,11 +1,11 @@
 defmodule GreenbarExec.Options do
 
-  def which_processor?(options) do
+  def which_renderer?(options) do
     if use_slack?(options) do
-      TemplateProcessors.SlackProcessor
+      :slack
     else
       if use_hipchat?(options) do
-        TemplateProcessors.HipChatProcessor
+        :hipchat
       else
         :none
       end

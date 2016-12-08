@@ -35,8 +35,8 @@ defmodule GreenbarExec do
     %__MODULE__{template_file: template_file, data_file: data_file}
   end
 
-  defp render(options, sources) do
-    case Options.which_processor?(options) do
+  def render(options, sources) do
+    case Options.which_renderer?(options) do
       :none ->
         display_help()
         :init.stop(2)
@@ -45,17 +45,11 @@ defmodule GreenbarExec do
           {:ok, template} ->
             case read_data(sources.data_file) do
               {:ok, data} ->
-                case render_template(template, data) do
-                  {:ok, directives} ->
-                    case processor.render(directives) do
-                      {output, attachment} ->
-                        display_results(output, attachment)
-                      output when is_binary(output) ->
-                        display_results(output, nil)
-                    end
-                  error ->
-                    IO.puts :stderr, "Template rendering failed: #{inspect error}"
-                    :init.stop(3)
+                case render_template(template, data, processor) do
+                  [output: output, attachment: attachment] ->
+                    display_results(output, attachment)
+                  [output: output] ->
+                    display_results(output, nil)
                 end
               error ->
                 IO.puts :stderr, "Reading template data failed: #{inspect error}"
@@ -91,15 +85,14 @@ defmodule GreenbarExec do
   defp read_data(nil), do: {:ok, "{}"}
   defp read_data(path), do: read_file(path)
 
-  defp render_template(template, data) do
+  defp render_template(template, data, renderer) do
     case Poison.decode(data) do
       {:error, _} ->
         "invalid JSON"
       {:ok, data} ->
         {:ok, engine} = Engine.new()
         engine = Engine.compile!(engine, @script_name, template)
-        directives = Engine.eval!(engine, @script_name, data)
-        Poison.decode(Poison.encode!(directives))
+        Engine.eval!(engine, @script_name, scope: data, render: renderer)
     end
   end
 

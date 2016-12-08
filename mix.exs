@@ -17,14 +17,12 @@ defmodule GreenbarExec.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger,
-                    :template_processors,
                     :greenbar_markdown,
                     :greenbar]]
   end
 
   defp deps do
-    [{:greenbar, github: "operable/greenbar"},
-     {:template_processors, github: "operable/template_processors"}]
+    [{:greenbar, github: "operable/greenbar"}]
   end
 
   defp escript() do

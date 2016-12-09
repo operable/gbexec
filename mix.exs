@@ -3,7 +3,7 @@ defmodule GreenbarExec.Mixfile do
 
   def project do
     [app: :greenbar_exec,
-     version: "0.17",
+     version: "0.18.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,

@@ -22,7 +22,7 @@ defmodule GreenbarExec.Mixfile do
   end
 
   defp deps do
-    [{:greenbar, github: "operable/greenbar", branch: "v1.0.0-beta.1"}]
+    [{:greenbar, github: "operable/greenbar", tag: "1.0.0-beta.1"}]
   end
 
   defp escript() do

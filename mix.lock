@@ -1,6 +1,6 @@
-%{"greenbar": {:git, "https://github.com/operable/greenbar.git", "df27ec9963d6af8f9b4bab3d7223218c88be34e6", [branch: "v1.0.0-beta.1"]},
-  "greenbar_markdown": {:git, "https://github.com/operable/greenbar_markdown.git", "abc2fe0735ebf7c43228a2dfa5f260c7a086ac94", [branch: "v1.0.0-beta.1"]},
-  "piper": {:git, "https://github.com/operable/piper.git", "2a566a465e923dee6a8b45c7358859f6bf17baf0", [branch: "v1.0.0-beta.1"]},
+%{"greenbar": {:git, "https://github.com/operable/greenbar.git", "7efc90d940fab599a5a817d6b249f1116e85f3e4", [tag: "1.0.0-beta.1"]},
+  "greenbar_markdown": {:git, "https://github.com/operable/greenbar_markdown.git", "abc2fe0735ebf7c43228a2dfa5f260c7a086ac94", [tag: "1.0.0-beta.1"]},
+  "piper": {:git, "https://github.com/operable/piper.git", "2a566a465e923dee6a8b45c7358859f6bf17baf0", [tag: "1.0.0-beta.1"]},
   "poison": {:hex, :poison, "2.2.0", "4763b69a8a77bd77d26f477d196428b741261a761257ff1cf92753a0d4d24a63", [:mix], []},
   "table_rex": {:hex, :table_rex, "0.8.3", "1c68dfc6886d6f118f5047b0449d6402ae0ac5709064789e578c2f4659f4064b", [:mix], []},
   "uuid": {:hex, :uuid, "1.1.5", "96cb36d86ee82f912efea4d50464a5df606bf3f1163d6bdbb302d98474969369", [:mix], []}}

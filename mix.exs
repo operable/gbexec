@@ -3,7 +3,7 @@ defmodule GreenbarExec.Mixfile do
 
   def project do
     [app: :greenbar_exec,
-     version: "0.17.0",
+     version: "1.0.0-beta.1",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -22,7 +22,7 @@ defmodule GreenbarExec.Mixfile do
   end
 
   defp deps do
-    [{:greenbar, github: "operable/greenbar", branch: "v0.17.0"}]
+    [{:greenbar, github: "operable/greenbar", branch: "v1.0.0-beta.1"}]
   end
 
   defp escript() do

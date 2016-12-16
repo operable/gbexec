@@ -1,4 +1,4 @@
-%{"greenbar": {:git, "https://github.com/operable/greenbar.git", "b0c57915d93eb993f48ca74143eed1450b8b1459", []},
+%{"greenbar": {:git, "https://github.com/operable/greenbar.git", "e56d7e6004765613feddd8bb45114de35aad1cb7", []},
   "greenbar_markdown": {:git, "https://github.com/operable/greenbar_markdown.git", "ad6d027c92ef095a0461c08847d3eb999659c3a2", []},
   "piper": {:git, "https://github.com/operable/piper.git", "1d52b32f41226398fdb37baca7398bbf0b93c1a3", []},
   "poison": {:hex, :poison, "2.2.0", "4763b69a8a77bd77d26f477d196428b741261a761257ff1cf92753a0d4d24a63", [:mix], []},
